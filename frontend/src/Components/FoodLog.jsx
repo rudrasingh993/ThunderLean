@@ -187,13 +187,13 @@ const DeleteConfirmationModal = ({ isOpen, onClose, onConfirm, mealName }) => {
           <div className="flex space-x-3">
             <button
               onClick={onClose}
-              className="flex-1 px-4 py-2 bg-[#282828] text-white rounded-lg hover:bg-[#383838] transition-colors"
+              className="btn-lift-glow flex-1 px-4 py-2 bg-[#282828] text-white rounded-lg"
             >
               Cancel
             </button>
             <button
               onClick={onConfirm}
-              className="flex-1 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+              className="btn-lift-glow btn-glow-danger flex-1 px-4 py-2 bg-red-600 text-white rounded-lg"
             >
               Delete
             </button>
@@ -220,7 +220,7 @@ const AiAnalysisCard = ({
       <p className="text-sm text-gray-400 mb-4">{description}</p>
       <button
         onClick={onClick}
-        className="flex items-center space-x-2 bg-green-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
+        className="btn-lift-glow btn-glow-success flex items-center space-x-2 bg-green-600 text-white font-semibold px-4 py-2 rounded-lg"
       >
         {buttonIcon}
         <span>{buttonText}</span>
@@ -238,7 +238,7 @@ const AiAnalysisCard = ({
 
 // MODIFIED: Updated MealCard with click handler
 const MealCard = ({ meal, onDelete, onViewDetails }) => (
-  <div className="w-full bg-[#1E1E1E] rounded-xl p-4 flex items-center space-x-4 text-left hover:bg-[#252525] transition-all duration-200 cursor-pointer group">
+  <div className="btn-lift-glow w-full bg-[#1E1E1E] rounded-xl p-4 flex items-center space-x-4 text-left cursor-pointer group">
     <div
       onClick={() => onViewDetails(meal)}
       className="flex items-center space-x-4 flex-grow"
@@ -267,7 +267,7 @@ const MealCard = ({ meal, onDelete, onViewDetails }) => (
         e.stopPropagation();
         onDelete(meal.id, meal.name);
       }}
-      className="p-2 text-gray-400 hover:text-red-500 transition-colors rounded-full"
+      className="btn-lift-glow btn-glow-danger p-2 text-gray-400 rounded-full"
     >
       <IoTrashOutline className="h-5 w-5" />
     </button>
@@ -310,7 +310,7 @@ const AnalysisModal = ({
             type="submit"
             disabled={isLoading || !mealDescription.trim()}
 
-            className="w-full px-4 py-3 bg-green-600 text-white/100 font-semibold rounded-lg shadow-md hover:bg-green-700 disabled:opacity-50 transition flex items-center justify-center gap-2"
+            className="btn-lift-glow btn-glow-success w-full px-4 py-3 bg-green-600 text-white/100 font-semibold rounded-lg shadow-md disabled:opacity-50 disabled:transform-none disabled:shadow-none flex items-center justify-center gap-2"
 
           >
             {isLoading ? (
@@ -412,10 +412,10 @@ const ImageUploadModal = ({ isOpen, onClose, onSubmit, isLoading }) => {
               <button
                 key={type}
                 onClick={() => setMealType(type)}
-                className={`px-4 py-1.5 rounded-full border transition-colors text-sm font-semibold ${
+                className={`btn-lift-glow px-4 py-1.5 rounded-full border text-sm font-semibold ${
                   mealType === type
                     ? "bg-green-600 border-green-600 text-white"
-                    : "bg-transparent border-gray-600 text-gray-300 hover:bg-gray-700"
+                    : "bg-transparent border-gray-600 text-gray-300"
                 }`}
               >
                 {type}
@@ -426,7 +426,7 @@ const ImageUploadModal = ({ isOpen, onClose, onSubmit, isLoading }) => {
         <button
           onClick={handleSubmit}
           disabled={!selectedFile || isLoading}
-          className="w-full py-3 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 disabled:bg-gray-500 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
+          className="btn-lift-glow btn-glow-success w-full py-3 bg-green-600 text-white font-bold rounded-xl disabled:bg-gray-500 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none flex items-center justify-center gap-2"
         >
           {isLoading ? <IoSyncOutline className="animate-spin" /> : null}
           {isLoading ? "Submitting..." : "Submit"}
@@ -680,7 +680,7 @@ const FoodLog = () => {
           <div className="max-w-5xl mx-auto">
             <header className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold">Food Log</h1>
-              <button className="bg-green-600 text-white font-bold px-5 py-2.5 rounded-xl hover:bg-green-700 transition-colors">
+              <button className="btn-lift-glow btn-glow-success bg-green-600 text-white font-bold px-5 py-2.5 rounded-xl">
                 + Add Manually
               </button>
             </header>
@@ -747,7 +747,7 @@ const FoodLog = () => {
               </div>
             </section>
           </div>
-          <button className="fixed bottom-20 right-4 md:bottom-8 md:right-8 bg-green-500 hover:bg-green-700 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110">
+          <button className="btn-lift-glow btn-glow-success fixed bottom-20 right-4 md:bottom-8 md:right-8 bg-green-500 text-white p-4 rounded-full shadow-lg">
             <IoChatbubbleEllipsesOutline className="h-6 w-6" />
           </button>
         </main>

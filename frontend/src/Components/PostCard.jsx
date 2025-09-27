@@ -174,7 +174,7 @@ const PostCard = ({ post, currentUser, onPostDeleted, onPostUpdated }) => {
                 <div className="relative">
                   <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    className="p-1 rounded-full hover:bg-gray-700"
+                    className="btn-lift-glow p-1 rounded-full"
                   >
                     <IoEllipsisHorizontal className="text-gray-400" />
                   </button>
@@ -185,7 +185,7 @@ const PostCard = ({ post, currentUser, onPostDeleted, onPostUpdated }) => {
                           setIsEditModalOpen(true);
                           setIsMenuOpen(false);
                         }}
-                        className="block w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-gray-700"
+                        className="btn-lift-glow block w-full text-left px-4 py-2 text-sm text-gray-300"
                       >
                         Edit Post
                       </button>
@@ -194,7 +194,7 @@ const PostCard = ({ post, currentUser, onPostDeleted, onPostUpdated }) => {
                           setIsDeleteModalOpen(true);
                           setIsMenuOpen(false);
                         }}
-                        className="block w-full text-left px-4 py-2 text-sm text-red-400 hover:bg-gray-700"
+                        className="btn-lift-glow btn-glow-danger block w-full text-left px-4 py-2 text-sm text-red-400"
                       >
                         Delete Post
                       </button>
@@ -214,8 +214,8 @@ const PostCard = ({ post, currentUser, onPostDeleted, onPostUpdated }) => {
             <div className="flex items-center space-x-6 mt-4 text-gray-400">
               <button
                 onClick={handleLike}
-                className={`flex items-center space-x-1.5 transition-colors duration-200 ${
-                  isLiked ? "text-pink-500" : "hover:text-pink-500"
+                className={`btn-lift-glow flex items-center space-x-1.5 ${
+                  isLiked ? "text-pink-500" : ""
                 }`}
               >
                 {isLiked ? <IoHeart size={20} /> : <IoHeartOutline size={20} />}
@@ -223,14 +223,14 @@ const PostCard = ({ post, currentUser, onPostDeleted, onPostUpdated }) => {
               </button>
               <button
                 onClick={() => setIsCommentModalOpen(true)}
-                className="flex items-center space-x-1.5 hover:text-blue-500 transition-colors duration-200"
+                className="btn-lift-glow flex items-center space-x-1.5"
               >
                 <IoChatbubbleOutline size={20} />
                 <span className="text-sm font-semibold">{commentCount}</span>
               </button>
               <button
                 onClick={handleShare}
-                className="flex items-center space-x-1.5 hover:text-green-500 transition-colors duration-200"
+                className="btn-lift-glow flex items-center space-x-1.5"
               >
                 <IoShareSocialOutline size={20} />
               </button>

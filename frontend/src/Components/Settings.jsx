@@ -35,13 +35,13 @@ const LogoutConfirmationModal = ({ isOpen, onClose, onConfirm }) => {
         <div className="flex justify-center gap-4">
           <button
             onClick={onClose}
-            className="px-6 py-2 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-600 transition-colors"
+            className="btn-lift-glow px-6 py-2 bg-gray-700 text-white font-semibold rounded-lg"
           >
             Cancel
           </button>
           <button
             onClick={onConfirm}
-            className="px-6 py-2 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors"
+            className="btn-lift-glow btn-glow-danger px-6 py-2 bg-red-600 text-white font-semibold rounded-lg"
           >
             Log Out
           </button>
@@ -142,7 +142,7 @@ const ProfileModal = ({
             </div>
             <button
               type="submit"
-              className="w-full flex items-center justify-center space-x-2 bg-green-600 text-white font-bold px-6 py-3 rounded-xl hover:bg-green-700 transition-colors"
+              className="btn-lift-glow btn-glow-success w-full flex items-center justify-center space-x-2 bg-green-600 text-white font-bold px-6 py-3 rounded-xl"
             >
               <IoSaveOutline size={22} />
               <span>Save Changes</span>
@@ -157,7 +157,7 @@ const ProfileModal = ({
 const ManageListItem = ({ icon, title, description, onClick }) => (
   <button
     onClick={onClick}
-    className="w-full flex items-center space-x-4 p-4 text-left hover:bg-gray-800 rounded-lg transition-colors"
+    className="btn-lift-glow w-full flex items-center space-x-4 p-4 text-left rounded-lg"
   >
     <div className="p-2 bg-gray-700 rounded-lg">{icon}</div>
     <div className="flex-grow">
@@ -397,7 +397,7 @@ const Settings = () => {
             <section className="text-center">
               <button
                 onClick={() => setIsLogoutModalOpen(true)}
-                className="flex items-center justify-center w-full max-w-xs mx-auto space-x-2 bg-gray-800  text-red-500 font-bold px-6 py-3 rounded-xl hover:bg-red-500 hover:text-white transition-colors"
+                className="btn-lift-glow btn-glow-danger flex items-center justify-center w-full max-w-xs mx-auto space-x-2 bg-gray-800  text-red-500 font-bold px-6 py-3 rounded-xl"
               >
                 <IoLogOutOutline size={22} />
                 <span>Log Out</span>

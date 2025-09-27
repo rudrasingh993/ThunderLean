@@ -32,10 +32,10 @@ const StorySection = ({ storyRef, visibleSections, activeSection, setActiveSecti
           <button
             key={tab.id}
             onClick={() => setActiveSection(tab.id)}
-            className={`mx-2 mb-4 px-6 py-3 rounded-full font-semibold hover:scale-110 ${
+            className={`btn-lift-glow mx-2 mb-4 px-6 py-3 rounded-full font-semibold ${
               activeSection === tab.id
-                ? "bg-[#8C4DCF] hover:bg-[#7A3BB8] text-white shadow-lg"
-                : "bg-white text-gray-600 hover:bg-[#F3F0FF] hover:text-[#8C4DCF] shadow-md hover:shadow-lg hover:scale-105"
+                ? "bg-[#8C4DCF] text-white shadow-lg"
+                : "bg-white text-gray-600 shadow-md"
             } ${visibleSections.story ? `opacity-100 translate-y-0` : "opacity-0 translate-y-4"}`}
           >
             {tab.label}
@@ -45,7 +45,7 @@ const StorySection = ({ storyRef, visibleSections, activeSection, setActiveSecti
 
       {/* Content */}
       <div
-        className={`bg-white rounded-2xl shadow-xl p-8 transform transition-all duration-800 hover:shadow-2xl border border-purple-100 hover:scale-105 delay-800 ${
+        className={`btn-lift-glow bg-white rounded-2xl shadow-xl p-8 border border-purple-100 delay-800 ${
           visibleSections.story ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
@@ -69,7 +69,7 @@ const StorySection = ({ storyRef, visibleSections, activeSection, setActiveSecti
                 {activeTabData.valuesList.map((value, index) => (
                   <div
                     key={index}
-                    className="bg-gradient-to-br from-purple-50 to-blue-50 p-6 rounded-xl border border-purple-100 hover:shadow-lg transition-all duration-300 transform hover:scale-105 animate-fade-in-up"
+                    className="btn-lift-glow bg-gradient-to-br from-purple-50 to-blue-50 p-6 rounded-xl border border-purple-100 animate-fade-in-up"
                     style={{ animationDelay: `${index * 200}ms` }}
                   >
                     <div className="w-12 h-12  bg-[#8C4DCF] rounded-full flex items-center justify-center text-white text-xl mx-auto mb-4 hover:animate-spin">

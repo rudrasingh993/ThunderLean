@@ -155,7 +155,7 @@ const AiTrack = () => {
                 <button
                   onClick={handleTextSubmit}
                   disabled={isLoading || !mealDescription.trim()}
-                  className="px-3 py-3 bg-purple-600 text-white  font-semibold rounded-lg shadow-md hover:bg-purple-700 disabled:opacity-50 transition"
+                  className="btn-lift-glow px-3 py-3 bg-purple-600 text-white  font-semibold rounded-lg shadow-md disabled:opacity-50 disabled:transform-none disabled:shadow-none"
                 >
                   Analyze
                 </button>
@@ -231,7 +231,7 @@ const AiTrack = () => {
                 <button
                   onClick={handleIconClick}
                   disabled={isLoading}
-                  className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-lg rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50"
+                  className="btn-lift-glow-enhanced w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-lg rounded-full shadow-lg flex items-center justify-center gap-2 disabled:opacity-50 disabled:transform-none disabled:shadow-none"
                 >
                   <FaCamera />
                   <span>Analyze Meal from Image</span>

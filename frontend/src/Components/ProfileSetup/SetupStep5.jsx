@@ -70,14 +70,14 @@ const SetupStep5 = ({ submitProfile, prevStep, updateForm }) => {
       <div className="flex justify-between">
         <button
           onClick={prevStep}
-          className="px-6 py-3 bg-gray-700 rounded-lg font-semibold hover:bg-gray-600"
+          className="btn-lift-glow px-6 py-3 bg-gray-700 rounded-lg font-semibold"
         >
           Back
         </button>
         <button
           onClick={handleSubmit}
           disabled={!goal}
-          className="px-6 py-3 bg-purple-600 rounded-lg font-semibold hover:bg-purple-700 disabled:opacity-50"
+          className="btn-lift-glow px-6 py-3 bg-purple-600 rounded-lg font-semibold disabled:opacity-50 disabled:transform-none disabled:shadow-none"
         >
           Finish
         </button>

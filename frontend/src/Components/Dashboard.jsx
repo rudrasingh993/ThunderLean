@@ -43,7 +43,7 @@ const StatCard = ({
   gradient = "from-blue-500/20 to-purple-500/20",
 }) => (
   <div
-    className={`bg-gradient-to-br ${gradient} backdrop-blur-sm border border-gray-700/50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300`}
+    className={`btn-lift-glow bg-gradient-to-br ${gradient} backdrop-blur-sm border border-gray-700/50 p-6 rounded-2xl shadow-lg`}
   >
     {" "}
     <div className="flex items-center justify-between mb-3">
@@ -335,7 +335,7 @@ const Dashboard = () => {
                     className={`text-sm px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                       activeTab === "today"
                         ? "bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg"
-                        : "text-gray-400 hover:text-white hover:bg-gray-700/50"
+                        : "text-gray-400"
                     }`}
                   >
                     Today
@@ -345,7 +345,7 @@ const Dashboard = () => {
                     className={`text-sm px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                       activeTab === "week"
                         ? "bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg"
-                        : "text-gray-400 hover:text-white hover:bg-gray-700/50"
+                        : "text-gray-400"
                     }`}
                   >
                     This Week
@@ -439,7 +439,7 @@ const Dashboard = () => {
                     <button
                       onClick={syncStravaActivities}
                       disabled={isSyncing}
-                      className="bg-orange-600 text-white px-3 py-1.5 rounded-lg text-xs font-semibold disabled:opacity-50 hover:bg-orange-700 transition-colors"
+                      className="btn-lift-glow bg-orange-600 text-white px-3 py-1.5 rounded-lg text-xs font-semibold disabled:opacity-50 disabled:transform-none disabled:shadow-none"
                     >
                       {isSyncing ? "Syncing..." : "Sync"}
                     </button>
@@ -452,7 +452,7 @@ const Dashboard = () => {
                         ) => (
                           <div
                             key={activity.strava_activity_id}
-                            className="bg-gray-700/50 p-3 rounded-lg hover:bg-gray-700 transition-colors"
+                            className="btn-lift-glow bg-gray-700/50 p-3 rounded-lg"
                           >
                             <p className="font-bold text-white truncate">
                               {activity.name}
@@ -489,7 +489,7 @@ const Dashboard = () => {
           </div>
           <button
             onClick={() => setIsTipOpen(true)}
-            className="fixed bottom-20 right-4 md:bottom-8 md:right-8 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 z-40 border border-green-400/20"
+            className="btn-lift-glow btn-glow-success fixed bottom-20 right-4 md:bottom-8 md:right-8 bg-gradient-to-r from-green-500 to-emerald-600 text-white p-4 rounded-full shadow-2xl z-40 border border-green-400/20"
           >
             <IoChatbubbleEllipsesOutline className="h-6 w-6" />
           </button>

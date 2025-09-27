@@ -16,7 +16,7 @@ const Home = () => {
         <div className="flex justify-center -mt-7 sm:-mt-8 text-white">
           <Link
             to="/dashboard"
-            className="relative z-10 w-48 h-12 sm:w-56 sm:h-14 bg-[#8C4DCF] text-white text-lg sm:text-xl font-semibold rounded-full flex items-center justify-center shadow-2xl hover:bg-[#7a39c1] transition-transform transform hover:scale-105 duration-300"
+            className="btn-lift-glow-enhanced relative z-10 w-48 h-12 sm:w-56 sm:h-14 bg-[#8C4DCF] text-white text-lg sm:text-xl font-semibold rounded-full flex items-center justify-center shadow-2xl"
           >
             Start Now
           </Link>

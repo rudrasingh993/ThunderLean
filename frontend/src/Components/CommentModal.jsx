@@ -155,7 +155,7 @@ const CommentModal = ({
                 />
                 <button
                   type="submit"
-                  className="p-2 rounded-full bg-purple-600 text-white hover:bg-purple-700 disabled:bg-gray-500"
+                  className="btn-lift-glow p-2 rounded-full bg-purple-600 text-white disabled:bg-gray-500 disabled:transform-none disabled:shadow-none"
                   disabled={!newComment.trim()}
                 >
                   <IoSend />

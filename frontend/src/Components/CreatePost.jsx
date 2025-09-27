@@ -112,7 +112,7 @@ const CreatePost = ({ onPostCreated }) => {
           />
           <button
             onClick={removeImage}
-            className="absolute -top-2 -right-2 bg-gray-800 text-white rounded-full p-1"
+            className="btn-lift-glow absolute -top-2 -right-2 bg-gray-800 text-white rounded-full p-1"
           >
             <IoCloseCircle size={20} />
           </button>
@@ -125,7 +125,7 @@ const CreatePost = ({ onPostCreated }) => {
           <button
             key={tag}
             onClick={() => handleHashtagClick(tag)}
-            className="px-3 py-1 bg-gray-700 text-purple-300 text-xs font-semibold rounded-full hover:bg-gray-600 transition-colors"
+            className="btn-lift-glow px-3 py-1 bg-gray-700 text-purple-300 text-xs font-semibold rounded-full"
           >
             {tag}
           </button>
@@ -145,7 +145,7 @@ const CreatePost = ({ onPostCreated }) => {
         </label>
         <button
           onClick={handlePost}
-          className="bg-green-600 text-white font-bold px-5 py-1.5 rounded-lg hover:bg-green-700 transition-colors disabled:bg-gray-500"
+          className="btn-lift-glow btn-glow-success bg-green-600 text-white font-bold px-5 py-1.5 rounded-lg disabled:bg-gray-500 disabled:transform-none disabled:shadow-none"
           disabled={loading || !content.trim()}
         >
           {loading ? "Posting..." : "Post"}

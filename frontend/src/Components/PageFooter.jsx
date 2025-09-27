@@ -68,7 +68,7 @@ const PageFooter = () => {
                 <a
                   key={index}
                   href={social.href}
-                  className="text-gray-400 hover:text-white transition-colors text-2xl"
+                  className="btn-lift-glow text-gray-400 text-2xl"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -90,7 +90,7 @@ const PageFooter = () => {
                     <li key={link.name}>
                       <a
                         href={link.href}
-                        className="text-gray-400 hover:text-white transition-colors block py-1"
+                        className="btn-lift-glow text-gray-400 block py-1"
                       >
                         {link.name}
                       </a>
@@ -105,16 +105,16 @@ const PageFooter = () => {
         {/* Mobile Quick Links */}
         <div className="md:hidden mt-6 pt-4 border-t border-gray-700">
           <div className="flex justify-center flex-wrap gap-x-6 gap-y-2 text-sm">
-            <a href="/" className="text-gray-400 hover:text-white transition-colors">
+            <a href="/" className="btn-lift-glow text-gray-400">
               Home
             </a>
-            <a href="/#features" className="text-gray-400 hover:text-white transition-colors">
+            <a href="/#features" className="btn-lift-glow text-gray-400">
               Features
             </a>
-            <a href="/faqs" className="text-gray-400 hover:text-white transition-colors">
+            <a href="/faqs" className="btn-lift-glow text-gray-400">
               FAQs
             </a>
-            <a href="/#whyus" className="text-gray-400 hover:text-white transition-colors">
+            <a href="/#whyus" className="btn-lift-glow text-gray-400">
               About
             </a>
           </div>
@@ -132,7 +132,7 @@ const PageFooter = () => {
       {isVisible && (
   <button
     onClick={scrollToTop}
-    className="fixed bottom-6 right-6 p-4 rounded-full bg-purple-600 text-white shadow-2xl hover:bg-purple-700 hover:scale-110 hover:shadow-purple-500/25 transition-all duration-300 ease-in-out transform hover:-translate-y-1 animate-bounce z-50"
+    className="btn-lift-glow-enhanced fixed bottom-6 right-6 p-4 rounded-full bg-purple-600 text-white shadow-2xl z-50"
     style={{
       animation: 'float 3s ease-in-out infinite',
       background: 'linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)',

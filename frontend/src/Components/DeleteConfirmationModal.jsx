@@ -15,13 +15,13 @@ const DeleteConfirmationModal = ({ isOpen, onClose, onConfirm }) => {
         <div className="flex justify-center gap-4">
           <button
             onClick={onClose}
-            className="px-6 py-2 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-600 transition-colors"
+            className="btn-lift-glow px-6 py-2 bg-gray-700 text-white font-semibold rounded-lg"
           >
             Cancel
           </button>
           <button
             onClick={onConfirm}
-            className="px-6 py-2 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors"
+            className="btn-lift-glow btn-glow-danger px-6 py-2 bg-red-600 text-white font-semibold rounded-lg"
           >
             Delete
           </button>

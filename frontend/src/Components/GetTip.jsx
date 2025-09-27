@@ -59,7 +59,7 @@ const GetTip = ({ isOpen, onClose }) => {
           <IoSparkles className="text-green-400" />
           <h2 className="text-lg font-semibold">AI Assistant</h2>
         </div>
-        <button onClick={onClose} className="text-gray-400 hover:text-white transition-colors">
+        <button onClick={onClose} className="btn-lift-glow text-gray-400">
           <IoClose size={24} />
         </button>
       </header>
@@ -122,7 +122,7 @@ const GetTip = ({ isOpen, onClose }) => {
           <button
             onClick={handleGetTip}
             disabled={isLoading || !userInput.trim()}
-            className="p-2 rounded-md text-white bg-green-600 hover:bg-green-700 disabled:bg-gray-500 disabled:cursor-not-allowed transition-colors"
+            className="btn-lift-glow btn-glow-success p-2 rounded-md text-white bg-green-600 disabled:bg-gray-500 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none"
           >
             <IoSend size={20} />
           </button>

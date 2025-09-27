@@ -7,7 +7,8 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    VitePWA({
+    // Only enable PWA in production builds to avoid dev server issues
+    ...(process.env.NODE_ENV === 'production' ? [VitePWA({
       registerType: "autoUpdate",
       // Explicitly include assets in the public directory to be cached
       includeAssets: [
@@ -51,6 +52,6 @@ export default defineConfig({
           },
         ],
       },
-    }),
+    })] : []),
   ],
 });

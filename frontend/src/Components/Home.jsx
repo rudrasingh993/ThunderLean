@@ -22,7 +22,7 @@ const ActivityItem = ({
   image_url,
   hasImage,
 }) => (
-  <div className="group bg-gradient-to-r from-gray-800/60 to-gray-700/60 backdrop-blur-sm border border-gray-600/30 p-5 rounded-2xl hover:from-gray-700/70 hover:to-gray-600/70 transition-all duration-300 shadow-lg hover:shadow-xl">
+  <div className="btn-lift-glow group bg-gradient-to-r from-gray-800/60 to-gray-700/60 backdrop-blur-sm border border-gray-600/30 p-5 rounded-2xl shadow-lg">
     <div className="flex items-center space-x-4">
       {/* Image or Icon */}
       <div className="relative">
@@ -31,11 +31,11 @@ const ActivityItem = ({
             <img
               src={image_url}
               alt={title}
-              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              className="w-full h-full object-cover"
             />
           </div>
         ) : (
-          <div className="w-14 h-14 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-xl flex items-center justify-center border border-gray-600/30 group-hover:from-green-500/30 group-hover:to-blue-500/30 transition-all duration-300">
+          <div className="w-14 h-14 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-xl flex items-center justify-center border border-gray-600/30">
             {hasImage ? (
               <IoImageOutline className="text-gray-400 h-6 w-6" />
             ) : (
@@ -303,7 +303,7 @@ const Home = () => {
 
           <button
             onClick={() => setIsTipOpen(true)}
-            className="fixed bottom-20 right-4 md:bottom-8 md:right-8 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 z-40 border border-green-400/20"
+            className="btn-lift-glow btn-glow-success fixed bottom-20 right-4 md:bottom-8 md:right-8 bg-gradient-to-r from-green-500 to-emerald-600 text-white p-4 rounded-full shadow-2xl z-40 border border-green-400/20"
           >
             <IoChatbubbleEllipsesOutline className="h-6 w-6" />
           </button>

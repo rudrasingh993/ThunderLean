@@ -128,7 +128,7 @@ const AddLogModal = ({ isOpen, onClose, onNavigate }) => {
                 <button
                   key={item.name}
                   onClick={() => onNavigate(item.path)}
-                  className="w-full flex items-center space-x-4 p-4 text-left hover:bg-gray-700 rounded-lg transition-colors"
+                  className="btn-lift-glow w-full flex items-center space-x-4 p-4 text-left rounded-lg"
                 >
                   <div className="p-2 bg-gray-800 rounded-lg">{item.icon}</div>
                   <p className="flex-grow font-semibold text-white">{item.name}</p>

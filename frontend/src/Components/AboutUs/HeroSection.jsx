@@ -38,7 +38,7 @@ const HeroSection = ({ heroRef, isVisible, scrollToSection, storyRef }) => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-1000">
-          <div className="bg-white/20 backdrop-blur-sm rounded-full px-8 py-3 text-black border border-black/30 cursor-pointer hover:bg-white/30 transform hover:scale-105 transition-all duration-300 hover:shadow-lg">
+          <div className="btn-lift-glow bg-white/20 backdrop-blur-sm rounded-full px-8 py-3 text-black border border-black/30 cursor-pointer">
             🚀 AI-Powered • Smart • Intuitive
           </div>
         </div>
@@ -46,7 +46,7 @@ const HeroSection = ({ heroRef, isVisible, scrollToSection, storyRef }) => {
         {/* Scroll Down Arrow */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <ArrowDown
-            className="text-black/70 w-8 h-8 cursor-pointer hover:text-black transition-colors duration-300"
+            className="btn-lift-glow text-black/70 w-8 h-8 cursor-pointer"
             onClick={() => scrollToSection(storyRef)}
           />
         </div>

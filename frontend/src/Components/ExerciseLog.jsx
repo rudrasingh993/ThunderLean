@@ -6,8 +6,8 @@ import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 import BottomNav from './BottomNav';
 
 const WorkoutCard = ({ title, imageUrl }) => (
-  <button className="text-center group">
-    <div className="relative bg-[#1E1E1E] rounded-xl mb-2 flex items-center justify-center h-28 overflow-hidden transform transition-transform duration-300 group-hover:scale-105">
+  <button className="btn-lift-glow text-center group">
+    <div className="relative bg-[#1E1E1E] rounded-xl mb-2 flex items-center justify-center h-28 overflow-hidden">
       <img
         src={imageUrl}
         alt={title}
@@ -103,7 +103,7 @@ const ExerciseLog = () => {
                 ))}
               </div>
               <div className="text-center">
-                <button className="bg-green-600 text-white font-bold px-8 py-3 rounded-xl hover:bg-green-700 transition-colors">
+                <button className="btn-lift-glow btn-glow-success bg-green-600 text-white font-bold px-8 py-3 rounded-xl">
                   Log Past Exercise
                 </button>
               </div>
@@ -111,7 +111,7 @@ const ExerciseLog = () => {
           </div>
           <button
             onClick={() => setIsTipOpen(true)}
-            className="fixed bottom-20 right-4 md:bottom-8 md:right-8 bg-green-500 hover:bg-green-700 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110 z-40"
+            className="btn-lift-glow btn-glow-success fixed bottom-20 right-4 md:bottom-8 md:right-8 bg-green-500 text-white p-4 rounded-full shadow-lg z-40"
           >
             <IoChatbubbleEllipsesOutline className="h-6 w-6" />
           </button>

@@ -174,10 +174,10 @@ const Sidebar = ({ activePage }) => {
                 <button
                   key={slug}
                   onClick={() => handleNavigate(slug)}
-                  className={`flex items-center space-x-4 px-4 py-3 rounded-lg w-full text-left transition-colors duration-200 ${
+                  className={`btn-lift-glow flex items-center space-x-4 px-4 py-3 rounded-lg w-full text-left ${
                     isActive
                       ? "bg-green-600 text-white font-bold shadow-lg"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                      : "text-gray-300"
                   }`}
                 >
                   <Icon active={isActive} />
@@ -191,10 +191,10 @@ const Sidebar = ({ activePage }) => {
           <div className="pt-4 mt-auto border-t border-gray-700/50">
              <button
                 onClick={() => handleNavigate('settings')}
-                className={`flex items-center space-x-4 px-4 py-3 rounded-lg w-full text-left transition-colors duration-200 ${
+                className={`btn-lift-glow flex items-center space-x-4 px-4 py-3 rounded-lg w-full text-left ${
                   activePage === 'settings'
                     ? "bg-green-600 text-white font-bold shadow-lg"
-                    : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                    : "text-gray-300"
                 }`}
               >
                 <SettingsIcon active={activePage === 'settings'} />

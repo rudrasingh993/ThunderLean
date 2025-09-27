@@ -44,7 +44,7 @@ const EditPostModal = ({ isOpen, onClose, post, onPostUpdated }) => {
         <button
           onClick={handleUpdate}
           disabled={loading}
-          className="w-full mt-4 px-4 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 disabled:opacity-50 transition flex items-center justify-center gap-2"
+          className="btn-lift-glow w-full mt-4 px-4 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-md disabled:opacity-50 disabled:transform-none disabled:shadow-none flex items-center justify-center gap-2"
         >
           <IoSaveOutline />
           <span>{loading ? "Saving..." : "Save Changes"}</span>

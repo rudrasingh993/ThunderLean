@@ -226,7 +226,7 @@ const TdeeCalculator = () => {
             <button
               onClick={handleCalculate}
               disabled={isLoading}
-              className="w-full py-4 px-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 disabled:opacity-50"
+              className="btn-lift-glow-enhanced w-full py-4 px-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-lg rounded-xl shadow-lg disabled:opacity-50 disabled:transform-none disabled:shadow-none"
             >
               {isLoading ? "CALCULATING..." : "CALCULATE"}
             </button>

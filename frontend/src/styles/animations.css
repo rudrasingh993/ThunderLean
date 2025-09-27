@@ -1,0 +1,247 @@
+/* ============================================
+   THUNDERLEAN ANIMATION SYSTEM
+   Reusable hover animations for buttons
+   ============================================ */
+
+/* Animation Variables */
+:root {
+  /* Duration Variables */
+  --animation-duration-fast: 0.2s;
+  --animation-duration-normal: 0.3s;
+  --animation-duration-slow: 0.5s;
+  --animation-duration-slower: 0.8s;
+
+  /* Easing Variables */
+  --ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-in-out-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out-elastic: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Transform Variables */
+  --lift-distance: 4px;
+  --lift-distance-large: 8px;
+  --scale-hover: 1.05;
+  --scale-hover-large: 1.1;
+  --rotate-hover: 2deg;
+
+  /* Shadow Variables */
+  --shadow-hover: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-hover-large: 0 20px 40px -10px rgba(0, 0, 0, 0.15), 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 20px rgba(140, 77, 207, 0.4);
+  --shadow-glow-strong: 0 0 30px rgba(140, 77, 207, 0.6);
+
+  /* Glow Variables */
+  --glow-color-primary: rgba(140, 77, 207, 0.4);
+  --glow-color-secondary: rgba(116, 51, 184, 0.3);
+  --glow-color-success: rgba(34, 197, 94, 0.4);
+  --glow-color-warning: rgba(245, 158, 11, 0.4);
+  --glow-color-danger: rgba(239, 68, 68, 0.4);
+}
+
+/* ============================================
+   LIFT AND GLOW ANIMATION
+   ============================================ */
+.btn-lift-glow {
+  position: relative;
+  transition: all var(--animation-duration-normal) var(--ease-out-cubic);
+  transform: translateY(0);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.btn-lift-glow:hover {
+  transform: translateY(calc(-1 * var(--lift-distance)));
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-lift-glow:active {
+  transform: translateY(calc(-1 * var(--lift-distance) * 0.5));
+  transition: all var(--animation-duration-fast) var(--ease-out-cubic);
+}
+
+/* Glow Effect */
+.btn-lift-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  background: linear-gradient(45deg, var(--glow-color-primary), var(--glow-color-secondary));
+  opacity: 0;
+  transition: opacity var(--animation-duration-normal) var(--ease-out-cubic);
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.btn-lift-glow:hover::before {
+  opacity: 1;
+}
+
+/* ============================================
+   ENHANCED LIFT AND GLOW (More Dramatic)
+   ============================================ */
+.btn-lift-glow-enhanced {
+  position: relative;
+  transition: all var(--animation-duration-slow) var(--ease-out-back);
+  transform: translateY(0) scale(1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.btn-lift-glow-enhanced:hover {
+  transform: translateY(calc(-1 * var(--lift-distance-large))) scale(var(--scale-hover));
+  box-shadow: var(--shadow-hover-large);
+}
+
+.btn-lift-glow-enhanced::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: inherit;
+  background: linear-gradient(45deg, var(--glow-color-primary), var(--glow-color-secondary));
+  opacity: 0;
+  transition: opacity var(--animation-duration-slow) var(--ease-out-cubic);
+  z-index: -1;
+  filter: blur(12px);
+}
+
+.btn-lift-glow-enhanced:hover::before {
+  opacity: 0.8;
+}
+
+/* ============================================
+   WIPE FILL ANIMATION
+   ============================================ */
+.btn-wipe-fill {
+  position: relative;
+  overflow: hidden;
+  transition: all var(--animation-duration-normal) var(--ease-out-cubic);
+}
+
+.btn-wipe-fill::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left var(--animation-duration-slow) var(--ease-out-cubic);
+}
+
+.btn-wipe-fill:hover::before {
+  left: 100%;
+}
+
+/* ============================================
+   BOUNCE ANIMATION
+   ============================================ */
+.btn-bounce {
+  transition: all var(--animation-duration-normal) var(--ease-out-elastic);
+}
+
+.btn-bounce:hover {
+  transform: translateY(calc(-1 * var(--lift-distance))) scale(var(--scale-hover));
+  animation: bounce-subtle 0.6s var(--ease-out-elastic);
+}
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(calc(-1 * var(--lift-distance))) scale(var(--scale-hover)); }
+  50% { transform: translateY(calc(-1 * var(--lift-distance) * 1.2)) scale(calc(var(--scale-hover) * 1.05)); }
+}
+
+/* ============================================
+   ROTATE AND GLOW ANIMATION
+   ============================================ */
+.btn-rotate-glow {
+  transition: all var(--animation-duration-normal) var(--ease-out-cubic);
+}
+
+.btn-rotate-glow:hover {
+  transform: rotate(var(--rotate-hover)) scale(var(--scale-hover));
+  box-shadow: var(--shadow-glow);
+}
+
+/* ============================================
+   PULSE GLOW ANIMATION
+   ============================================ */
+.btn-pulse-glow {
+  transition: all var(--animation-duration-normal) var(--ease-out-cubic);
+}
+
+.btn-pulse-glow:hover {
+  animation: pulse-glow 1.5s infinite;
+  box-shadow: var(--shadow-glow);
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: var(--shadow-glow);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: var(--shadow-glow-strong);
+    transform: scale(1.02);
+  }
+}
+
+/* ============================================
+   COLOR-SPECIFIC GLOW EFFECTS
+   ============================================ */
+.btn-glow-primary {
+  --glow-color: var(--glow-color-primary);
+}
+
+.btn-glow-success {
+  --glow-color: var(--glow-color-success);
+}
+
+.btn-glow-warning {
+  --glow-color: var(--glow-color-warning);
+}
+
+.btn-glow-danger {
+  --glow-color: var(--glow-color-danger);
+}
+
+.btn-glow-primary::before,
+.btn-glow-success::before,
+.btn-glow-warning::before,
+.btn-glow-danger::before {
+  background: var(--glow-color);
+}
+
+/* ============================================
+   RESPONSIVE ANIMATIONS
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .btn-lift-glow,
+  .btn-lift-glow-enhanced,
+  .btn-wipe-fill,
+  .btn-bounce,
+  .btn-rotate-glow,
+  .btn-pulse-glow {
+    transition: none;
+    animation: none;
+  }
+  
+  .btn-lift-glow:hover,
+  .btn-lift-glow-enhanced:hover {
+    transform: none;
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.animation-delay-100 { animation-delay: 0.1s; }
+.animation-delay-200 { animation-delay: 0.2s; }
+.animation-delay-300 { animation-delay: 0.3s; }
+.animation-delay-500 { animation-delay: 0.5s; }
+
+.animation-duration-fast { animation-duration: var(--animation-duration-fast); }
+.animation-duration-normal { animation-duration: var(--animation-duration-normal); }
+.animation-duration-slow { animation-duration: var(--animation-duration-slow); }

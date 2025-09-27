@@ -28,7 +28,7 @@ const FeaturesSection = forwardRef(({ visible }, ref) => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-500 border border-purple-100 hover:border-[#8C4DCF] group ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              className={`btn-lift-glow bg-white p-6 rounded-2xl shadow-lg border border-purple-100 group ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               style={{ transitionDelay: `${index * 150 + 400}ms` }}
             >

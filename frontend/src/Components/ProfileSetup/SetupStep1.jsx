@@ -49,7 +49,7 @@ const SetupStep1 = ({ nextStep, updateForm }) => {
       </div>
       <button
         onClick={handleNext}
-        className="w-full py-3 bg-purple-600 rounded-lg font-semibold hover:bg-purple-700"
+        className="btn-lift-glow w-full py-3 bg-purple-600 rounded-lg font-semibold"
       >
         Next
       </button>

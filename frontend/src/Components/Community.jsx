@@ -102,7 +102,7 @@ const Community = () => {
           </div>
           <button
             onClick={() => setIsTipOpen(true)}
-            className="fixed bottom-20 right-4 md:bottom-8 md:right-8 bg-green-500 hover:bg-green-700 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110 z-40"
+            className="btn-lift-glow btn-glow-success fixed bottom-20 right-4 md:bottom-8 md:right-8 bg-green-500 text-white p-4 rounded-full shadow-lg z-40"
           >
             <IoChatbubbleEllipsesOutline className="h-6 w-6" />
           </button>

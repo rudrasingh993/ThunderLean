@@ -252,7 +252,7 @@ const FAQs = () => {
                 >
                   <button
                     onClick={() => toggleExpanded(faq.id)}
-                    className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                    className="btn-lift-glow w-full px-6 py-5 text-left flex items-center justify-between"
                   >
                     <span className="font-semibold text-gray-800 text-lg pr-4">
                       {faq.question}
@@ -284,20 +284,20 @@ const FAQs = () => {
                             <div className="flex gap-2">
                               <button
                                 onClick={() => handleFeedback(faq.id, true)}
-                                className={`p-2 rounded-full transition-colors ${
+                                className={`btn-lift-glow btn-glow-success p-2 rounded-full ${
                                   feedback[faq.id] === true
                                     ? "bg-green-100 text-green-600"
-                                    : "bg-gray-100 text-gray-500 hover:bg-green-50"
+                                    : "bg-gray-100 text-gray-500"
                                 }`}
                               >
                                 <FaThumbsUp size={14} />
                               </button>
                               <button
                                 onClick={() => handleFeedback(faq.id, false)}
-                                className={`p-2 rounded-full transition-colors ${
+                                className={`btn-lift-glow btn-glow-danger p-2 rounded-full ${
                                   feedback[faq.id] === false
                                     ? "bg-red-100 text-red-600"
-                                    : "bg-gray-100 text-gray-500 hover:bg-red-50"
+                                    : "bg-gray-100 text-gray-500"
                                 }`}
                               >
                                 <FaThumbsDown size={14} />
@@ -339,7 +339,7 @@ const FAQs = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button 
-                className="flex items-center justify-center gap-2 bg-[#8C4DCF] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#7A42B8] transition-colors"
+                className="btn-lift-glow-enhanced flex items-center justify-center gap-2 bg-[#8C4DCF] text-white px-6 py-3 rounded-xl font-semibold"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -348,7 +348,7 @@ const FAQs = () => {
               </motion.button>
               <motion.button 
                 onClick={() => navigate('/auth')}
-                className="flex items-center justify-center gap-2 border-2 border-[#8C4DCF] text-[#8C4DCF] px-6 py-3 rounded-xl font-semibold hover:bg-[#8C4DCF] hover:text-white transition-colors"
+                className="btn-lift-glow flex items-center justify-center gap-2 border-2 border-[#8C4DCF] text-[#8C4DCF] px-6 py-3 rounded-xl font-semibold"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

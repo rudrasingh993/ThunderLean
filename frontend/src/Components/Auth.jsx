@@ -130,7 +130,7 @@ const Auth = () => {
           <button
             onClick={() => navigate("/")}
             aria-label="Close"
-            className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors duration-200"
+            className="btn-lift-glow absolute top-4 right-4 text-gray-400"
           >
             <IoClose size={24} />
           </button>
@@ -210,7 +210,7 @@ const Auth = () => {
             <button
               onClick={signInWithGoogle}
               disabled={isLoading}
-              className="w-full flex justify-center items-center py-3 px-4 bg-white/90 text-gray-800 font-semibold rounded-lg hover:bg-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 transition-all duration-200 disabled:opacity-50"
+              className="btn-lift-glow w-full flex justify-center items-center py-3 px-4 bg-white/90 text-gray-800 font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 disabled:opacity-50 disabled:transform-none disabled:shadow-none"
             >
               <FaGoogle className="mr-3" />
               {isLogin ? "Sign in with Google" : "Sign up with Google"}
@@ -220,7 +220,7 @@ const Auth = () => {
           <div className="mt-6 text-center">
             <button
               onClick={toggleAuthMode}
-              className="text-purple-400 hover:text-purple-300 font-medium transition-colors"
+              className="btn-lift-glow text-purple-400 font-medium"
             >
               {isLogin
                 ? "Don't have an account? Sign up"

@@ -24,10 +24,10 @@ const CTASection = forwardRef(({ visible }, ref) => {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <button className="group bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transform hover:scale-110 transition-all duration-300 shadow-lg cursor-pointer hover:shadow-2xl animate-pulse-subtle">
+          <button className="btn-lift-glow-enhanced group bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg shadow-lg cursor-pointer">
             <span className="group-hover:animate-bounce inline-block">🚀</span> Start Now
           </button>
-          <button className="group border-2 border-white px-8 py-4 rounded-full font-bold text-lg bg-white text-purple-600 transform hover:scale-110 transition-all duration-300 cursor-pointer hover:shadow-2xl">
+          <button className="btn-lift-glow group border-2 border-white px-8 py-4 rounded-full font-bold text-lg bg-white text-purple-600 cursor-pointer">
             <span className="group-hover:animate-bounce inline-block">📞</span> Contact Us
           </button>
         </div>

@@ -26,7 +26,7 @@ const TeamSection = forwardRef(({ visible, teamMembers }, ref) => {
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className={`group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform hover:scale-105 transition-all duration-500 border border-purple-100 hover:rotate-1 ${
+            className={`btn-lift-glow group bg-white rounded-2xl shadow-lg overflow-hidden border border-purple-100 ${
               visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
             style={{ transitionDelay: `${index * 200 + 400}ms` }}

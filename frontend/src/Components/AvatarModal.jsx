@@ -124,7 +124,7 @@ const AvatarModal = ({ isOpen, onClose, onAvatarUpdate }) => {
           <div className="flex flex-col items-center gap-4 mb-6">
             <button
               onClick={() => fileInputRef.current.click()}
-              className="flex items-center gap-2 px-4 py-2 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-600"
+              className="btn-lift-glow flex items-center gap-2 px-4 py-2 bg-gray-700 text-white font-semibold rounded-lg"
             >
               <IoCloudUploadOutline />
               Upload your own
@@ -148,7 +148,7 @@ const AvatarModal = ({ isOpen, onClose, onAvatarUpdate }) => {
           <button
             onClick={handleSave}
             disabled={loading || (!selectedAvatar && !uploadedFile)}
-            className="w-full flex items-center justify-center space-x-2 bg-purple-600 text-white font-bold px-6 py-3 rounded-xl hover:bg-purple-700 transition-colors disabled:opacity-50"
+            className="btn-lift-glow w-full flex items-center justify-center space-x-2 bg-purple-600 text-white font-bold px-6 py-3 rounded-xl disabled:opacity-50 disabled:transform-none disabled:shadow-none"
           >
             <IoSaveOutline size={22} />
             <span>{loading ? "Saving..." : "Save Changes"}</span>

@@ -165,14 +165,14 @@ const Navbar = () => {
               {!isLoggedIn ? (
                 <button
                   onClick={handleSignInClick}
-                  className="px-6 py-2 bg-[#7333b8] cursor-pointer text-white rounded-full hover:bg-[#6527a8] transition-transform transform hover:scale-105 duration-300"
+                  className="btn-lift-glow px-6 py-2 bg-[#7333b8] cursor-pointer text-white rounded-full"
                 >
                   Sign In
                 </button>
               ) : (
                 <button
                   onClick={handleLogout}
-                  className="px-6 py-2 bg-gray-500 text-white rounded-full hover:bg-gray-600 transition"
+                  className="btn-lift-glow px-6 py-2 bg-gray-500 text-white rounded-full"
                 >
                   Logout
                 </button>
@@ -180,7 +180,7 @@ const Navbar = () => {
               {isPwaInstallable && (
                 <button
                   onClick={handleInstallClick}
-                  className="px-6 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition"
+                  className="btn-lift-glow px-6 py-2 bg-purple-600 text-white rounded-full"
                 >
                   Install App
                 </button>
@@ -248,14 +248,14 @@ const Navbar = () => {
                 {!isLoggedIn ? (
                   <button
                     onClick={handleSignInClick}
-                    className="w-full px-6 py-3 bg-[#7333b8] text-white rounded-full hover:bg-[#6527a8] transition"
+                    className="btn-lift-glow w-full px-6 py-3 bg-[#7333b8] text-white rounded-full"
                   >
                     Sign In
                   </button>
                 ) : (
                   <button
                     onClick={handleLogout}
-                    className="w-full px-6 py-3 bg-gray-500 text-white rounded-full hover:bg-gray-600 transition"
+                    className="btn-lift-glow w-full px-6 py-3 bg-gray-500 text-white rounded-full"
                   >
                     Logout
                   </button>
@@ -263,7 +263,7 @@ const Navbar = () => {
                 {isPwaInstallable && (
                   <button
                     onClick={handleInstallClick}
-                    className="w-full px-6 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition"
+                    className="btn-lift-glow w-full px-6 py-3 bg-purple-600 text-white rounded-full"
                   >
                     Install App
                   </button>
